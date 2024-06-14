@@ -62,6 +62,11 @@ func routes(_ app: Application) throws {
         movieArr // returning Array of Object here, be clever for client-side programming.
     }
     
+    // MVDB Movies API http://127.0.0.1:8080/saa/mvdb/movies
+    app.get("saa", "mvdb", "movies") { req async in
+        MVDB_MOVIES
+    }
+    
     
     // MARK: - Post
 
